@@ -74,7 +74,7 @@
     //DELETE
     protected async Task DeleteVybaveni(VybaveniVm vyb)
     {
-        var odpoved = await Http.DeleteAsync("vybaveni_nemocnice/{vyb.Id}");
+        var odpoved = await Http.DeleteAsync($"vybaveni_nemocnice/{vyb.Id}");
         if (odpoved.IsSuccessStatusCode)
             seznamvybaveni?.Remove(vyb);
     }
